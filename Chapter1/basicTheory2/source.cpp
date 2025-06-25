@@ -24,6 +24,9 @@ void TypeObjectValue()
 
 	std::cout << mChar << " : " << &mChar << std::endl;
 	std::cout << mChar << " : " << static_cast<void*>(&mChar) << std::endl;
+	// int*, short* 등 포인터 타입은 "0x...." 형태로 주소값이 출력되는 것이 기본이지만, 
+	// char* 타입은 문자열을 가리키는 포인터로 취급되어 주소값 대신 그 내용물이 바로 출력됨 
+	//  'a'로 시작하여 '\0'를 만날때까지 출력하게
 }
 
 void OverFlow()
