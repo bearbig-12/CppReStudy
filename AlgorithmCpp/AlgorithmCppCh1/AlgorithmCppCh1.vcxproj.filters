@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Algorithm\algorithmCh1\FuncPtr.cpp">
+    <ClCompile Include="FuncPtr.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
