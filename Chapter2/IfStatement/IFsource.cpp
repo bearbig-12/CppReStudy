@@ -4,13 +4,17 @@ void MakeAbsoluteNum();
 void OddEven();
 void ExchangeRate();
 void SubwayCalculator();
+void ExchangeRateAddvanced();
 
 int main()
 {
+	ExchangeRateAddvanced();
+
 	//MakeAbsoluteNum();
 	//OddEven();
 	//ExchangeRate();
-	SubwayCalculator();
+	//SubwayCalculator();
+
 }
 
 void MakeAbsoluteNum()
@@ -199,5 +203,61 @@ void SubwayCalculator()
 	else
 	{
 		std::cout << "잘못된 결제 수단 입니다.";
+	}
+}
+
+void ExchangeRateAddvanced()
+{
+	float money;
+	char type;
+
+	const float USDToWON = 1369.83;
+	const float YenToWon = 9.42;
+	const float EuroToWon = 1606.52;
+	const float PoundToWon = 1860.53;
+
+	std::cout << "소유하신 원화를 입력하여 주세요 : ";
+	std::cin >> money;
+	std::cout << std::endl;
+
+	std::cout << "변환하고 싶은 통화 타입을 입력하여 주세요(U 달러, Y 엔화, E 유로, F 파운드) : ";
+	std::cin >> type;
+	// type = std::toupper(type); // 소문자를 대문자로 변환 사용 
+
+	switch (type)
+	{
+		// 소문자 대문자 입력을 같이 받기를 원한다면 아래와 같이
+		// 대문자만 받기를 원한다면 입력받는 단계에서 소문자 입력시 대문자로 변환
+		case 'U':
+		case 'u':
+		{
+			std::cout << money << "USD는 ";
+			std::cout << money * USDToWON << "원 입니다." << std::endl;
+			break;
+		}
+		case 'Y':
+		case 'y':
+		{
+			std::cout << money << "JPY는 ";
+			std::cout << money * YenToWon << "원 입니다." << std::endl;
+			break;
+		}
+		case 'E':
+		case 'e':
+		{
+			std::cout << money << "EUR는 ";
+			std::cout << money * EuroToWon << "원 입니다." << std::endl;
+			break;
+		}
+		case 'P':
+		case 'p':
+		{
+			std::cout << money << "GBP는 ";
+			std::cout << money * PoundToWon << "원 입니다." << std::endl;
+			break;
+		}
+	default:
+		std::cout << "유요하지 않은 화폐단위 입니다." << std::endl;
+		break;
 	}
 }
