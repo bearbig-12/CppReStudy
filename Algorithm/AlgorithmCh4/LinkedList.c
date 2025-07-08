@@ -1,13 +1,13 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <string.h>
 
-// ±¸Á¶Ã¼
-// ¼­·Î ¿¬°ü¼ºÀÖ´Â Data¸¦ ÇÏ³ª·Î ¹­À»¶§ »ç¿ëÇÕ´Ï´Ù.
+// êµ¬ì¡°ì²´
+// ì„œë¡œ ì—°ê´€ì„±ìžˆëŠ” Dataë¥¼ í•˜ë‚˜ë¡œ ë¬¶ì„ë•Œ ì‚¬ìš©í•©ë‹ˆë‹¤.
 
 typedef struct tagCar
 {
-	// »ç¿ëÀÚ Á¤ÀÇ µ¥ÀÌÅ¸ Å¸ÀÔ
-	char modelName[40]; // ±¸Á¶Ã¼ ¸â¹ö
+	// ì‚¬ìš©ìž ì •ì˜ ë°ì´íƒ€ íƒ€ìž…
+	char modelName[40]; // êµ¬ì¡°ì²´ ë©¤ë²„
 	int maxSpeed;
 	int wheelCount;
 
@@ -20,9 +20,9 @@ int main() {
 
 
 	Car car1 = { "BMW", 200, 4, NULL };
-	Car car2 = { "Á¦³×½Ã½º", 200, 4, NULL };
-	Car car3 = { "Æ÷ÅÍ", 150, 6, NULL };
-	Car car4 = { "¿ÀÅä¹ÙÀÌ", 200, 2, NULL };
+	Car car2 = { "ì œë„¤ì‹œìŠ¤", 200, 4, NULL };
+	Car car3 = { "í¬í„°", 150, 6, NULL };
+	Car car4 = { "ì˜¤í† ë°”ì´", 200, 2, NULL };
 
 	car1.Next = &car2;
 	car2.Next = &car3;
@@ -32,9 +32,9 @@ int main() {
 	printf("car4.maxSpeed = %d\n", car1.Next->Next->Next->maxSpeed);
 	printf("car4.wheelCount = %d\n", car1.Next->Next->Next->wheelCount);
 	printf("\n\n");
-	// car1À¸·Î car3¿¡ Á¢±ÙÇØ¼­
-	// name ¸â¹ö¿¡´Â EV6 , MaxSpeed : 200, Wheelcount : 4 ÀÇ °ªÀ» ÀúÀåÇÏ°í
-	// Car3ÀÇ ¸â¹öÀÇ °ªÀ» Ãâ·ÂÇØº¸¼¼¿ä..
+	// car1ìœ¼ë¡œ car3ì— ì ‘ê·¼í•´ì„œ
+	// name ë©¤ë²„ì—ëŠ” EV6 , MaxSpeed : 200, Wheelcount : 4 ì˜ ê°’ì„ ì €ìž¥í•˜ê³ 
+	// Car3ì˜ ë©¤ë²„ì˜ ê°’ì„ ì¶œë ¥í•´ë³´ì„¸ìš”..
 
 	strcpy_s(car1.Next->Next->modelName, sizeof(car1.Next->Next->modelName), "EV6");
 	car1.Next->Next->maxSpeed = 200;

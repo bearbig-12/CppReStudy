@@ -1,13 +1,13 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 void SetArray(int*, int);
 void PrintArray(int*, int);
 
 int main()
 {
 	int array[100];
-	// ¹è¿­ÀÇ Ä­Àº ÁÖ¼Ò°ªÀÌ¸ç, IntÇü ¹è¿­ÀÌ¹Ç·Î ÇÑ Ä­´ç 4byteÀÌ´Ù.
-	// À§ arrayÀÇ µ¥ÀÌÅÍ Å¸ÀÔÀº int* ÀÌ´Ù.
-	// ¹è¿­¸íÀº ÁÖ¼Ò»ó¼ö ÀÌ¹Ç·Î array = 10; °ú °°Àº °ªÀ» ³ÖÀ» ¼ö ¾ø´Ù.
+	// ë°°ì—´ì˜ ì¹¸ì€ ì£¼ì†Œê°’ì´ë©°, Intí˜• ë°°ì—´ì´ë¯€ë¡œ í•œ ì¹¸ë‹¹ 4byteì´ë‹¤.
+	// ìœ„ arrayì˜ ë°ì´í„° íƒ€ì…ì€ int* ì´ë‹¤.
+	// ë°°ì—´ëª…ì€ ì£¼ì†Œìƒìˆ˜ ì´ë¯€ë¡œ array = 10; ê³¼ ê°™ì€ ê°’ì„ ë„£ì„ ìˆ˜ ì—†ë‹¤.
 	SetArray(array, 100);
 
 	PrintArray(array, 100);

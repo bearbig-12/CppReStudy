@@ -1,10 +1,10 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 
 
-// ���ȣ��(recursive call)
-// Ż�� ������ ��Ȯ�ؾ� ��.
+// 재귀호출(recursive call)
+// 탈출 조건의 명확해야 함.
 // stack overflow
-// �Լ��� �ڱ��ڽ��� �ڽ��� ���ο��� ȣ��
+// 함수가 자기자신을 자신의 내부에서 호출
 
 
 int factorial(int n)

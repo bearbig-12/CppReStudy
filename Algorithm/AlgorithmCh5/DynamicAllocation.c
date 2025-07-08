@@ -1,31 +1,31 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 
-// º¯¼ö
-// »ı¼ºÀ§Ä¡, »ç¿ëµÇ´Â Å°¿öµå¿¡ µû¶ó¼­ º¯¼öÀÇ ¼º°İÀÌ ´Ù¸¨´Ï´Ù.
-// Á¸¼Ó±â°£, Á¢±Ù¹üÀ§
-int global = 0;   // ¿ÜºÎº¯¼ö, Àü¿ªº¯¼ö
+// ë³€ìˆ˜
+// ìƒì„±ìœ„ì¹˜, ì‚¬ìš©ë˜ëŠ” í‚¤ì›Œë“œì— ë”°ë¼ì„œ ë³€ìˆ˜ì˜ ì„±ê²©ì´ ë‹¤ë¦…ë‹ˆë‹¤.
+// ì¡´ì†ê¸°ê°„, ì ‘ê·¼ë²”ìœ„
+int global = 0;   // ì™¸ë¶€ë³€ìˆ˜, ì „ì—­ë³€ìˆ˜
 
 int GetScore(int value) {
-    static int sum = 0;   // ·ÎÄÃº¯¼ö, ÀÚµ¿º¯¼ö-> Á¤Àûº¯¼ö
+    static int sum = 0;   // ë¡œì»¬ë³€ìˆ˜, ìë™ë³€ìˆ˜-> ì •ì ë³€ìˆ˜
 
     return sum;
 }
 
 int main() {
-    int a = 20;   // ·ÎÄÃº¯¼ö(Áö¿ªº¯¼ö), ÀÚµ¿º¯¼ö
+    int a = 20;   // ë¡œì»¬ë³€ìˆ˜(ì§€ì—­ë³€ìˆ˜), ìë™ë³€ìˆ˜
 
     {
-        int b = 100;   // ·ÎÄÃº¯¼ö, ÀÚµ¿º¯¼ö
+        int b = 100;   // ë¡œì»¬ë³€ìˆ˜, ìë™ë³€ìˆ˜
     }
 
-    // µ¿Àû¸Ş¸ğ¸® °ø°£
+    // ë™ì ë©”ëª¨ë¦¬ ê³µê°„
     int count = 0;
-    printf("ÀÔ·ÂÇÏ½Ç Á¤¼öÀÇ °¹¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+    printf("ì…ë ¥í•˜ì‹¤ ì •ìˆ˜ì˜ ê°¯ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
     scanf_s("%d", &count);
 
     printf("\nmalloc\n");
-    int* parray = (int*)malloc(sizeof(int) * count);   // µ¿Àû¸Ş¸ğ¸® ÇÒ´ç
+    int* parray = (int*)malloc(sizeof(int) * count);   // ë™ì ë©”ëª¨ë¦¬ í• ë‹¹
 
     for (int i = 0; i < count; i++) {
         parray[i] = i;
@@ -35,25 +35,25 @@ int main() {
         printf("parray[%d] = %d\n", i, parray[i]);
     }
 
-    free(parray);   // µ¿Àû¸Ş¸ğ¸® °ø°£ ¹İ³³Ã³¸®
+    free(parray);   // ë™ì ë©”ëª¨ë¦¬ ê³µê°„ ë°˜ë‚©ì²˜ë¦¬
 
-    // calloc µ¿ÀûÀ¸·Î ÇÒ´çµÈ ¸Ş¸ğ¸® °ø°£À» 0À¸·Î ÃÊ±âÈ­
-    // reallocÀº ÇÒ´ç ¹ŞÀº °ø°£À» ÀçÇÒ´çÇÒ¶§ »ç¿ë.
+    // calloc ë™ì ìœ¼ë¡œ í• ë‹¹ëœ ë©”ëª¨ë¦¬ ê³µê°„ì„ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+    // reallocì€ í• ë‹¹ ë°›ì€ ê³µê°„ì„ ì¬í• ë‹¹í• ë•Œ ì‚¬ìš©.
     printf("\ncalloc\n");
-    float* pfarray = (float*)calloc(count, sizeof(float)); // µ¿Àû ¸Ş¸ğ¸® °ø°£À» ÇÒ´ç
+    float* pfarray = (float*)calloc(count, sizeof(float)); // ë™ì  ë©”ëª¨ë¦¬ ê³µê°„ì„ í• ë‹¹
 
     for (int i = 0; i < count; i++) {
         printf("pfarray[%d] = %f\n", i, pfarray[i]);
     }
 
     printf("\nrealloc\n");
-    pfarray = (float*)realloc(pfarray, sizeof(float) * count * 2);   // µ¿Àû¸Ş¸ğ¸® °ø°£ ÀçÇÒ´ç
+    pfarray = (float*)realloc(pfarray, sizeof(float) * count * 2);   // ë™ì ë©”ëª¨ë¦¬ ê³µê°„ ì¬í• ë‹¹
 
     for (int i = 0; i < count * 2; i++) {
         printf("pfarray[%d] = %f\n", i, pfarray[i]);
     }
 
-    free(pfarray);   // µ¿Àû¸Ş¸ğ¸® ¹İ³³Ã³¸®
+    free(pfarray);   // ë™ì ë©”ëª¨ë¦¬ ë°˜ë‚©ì²˜ë¦¬
 
 
     return 0;
