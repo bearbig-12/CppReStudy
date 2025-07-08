@@ -41,7 +41,7 @@ int main()
 	pFunptr1 = divide;
 	d = pFunptr1(a, c);
 	//std::cout << d << std::endl;
-	printf("%d / %d = %f\n", a, c , d);
+	printf("%d / %d = %f\n", a, c, d);
 
 
 	float(*pFunptr)(int, int, int);
