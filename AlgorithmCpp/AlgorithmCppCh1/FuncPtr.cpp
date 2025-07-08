@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 float add(int, int);
 float divide(int, int);
@@ -27,7 +27,7 @@ int main()
 	std::cout << "ThreeMul : a * b * c = " << d << std::endl;
 
 
-	float(*pFunptr1)(int, int); // ÇÔ¼ö Æ÷ÀÎÅÍ
+	float(*pFunptr1)(int, int); // í•¨ìˆ˜ í¬ì¸í„°
 
 	pFunptr1 = add;
 	d = pFunptr1(a, b);
@@ -43,7 +43,6 @@ int main()
 	pFunptr = threeMul;
 	d = pFunptr(a, b, c);
 	//std::cout << d << std::endl;
-
 }
 
 float add(int a, int b)

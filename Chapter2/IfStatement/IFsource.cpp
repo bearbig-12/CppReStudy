@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 void MakeAbsoluteNum();
 void OddEven();
@@ -20,7 +20,7 @@ int main()
 void MakeAbsoluteNum()
 {
 	int input;
-	std::cout << " ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ";
+	std::cout << " ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ";
 	std::cin >> input;
 	std::cout << std::endl;
 
@@ -33,22 +33,22 @@ void MakeAbsoluteNum()
 		absoluteNum = input;
 	}
 
-	std::cout << "Àı´ë°ª : " << absoluteNum << std::endl;
+	std::cout << "ì ˆëŒ€ê°’ : " << absoluteNum << std::endl;
 }
 
 void OddEven()
 {
 	int number{};
-	std::cout << "¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ";
+	std::cout << "ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” : ";
 	std::cin >> number;
 	std::cout << std::endl;
 
-	std::cout << "ÀÔ·Â ÇÏ½Å ¼ıÀÚ´Â ";
+	std::cout << "ì…ë ¥ í•˜ì‹  ìˆ«ìëŠ” ";
 	if (number % 2 == 0) {
-		std::cout << "Â¦¼ö ÀÔ´Ï´Ù.";
+		std::cout << "ì§ìˆ˜ ì…ë‹ˆë‹¤.";
 	}
 	else {
-		std::cout << "È¦¼ö ÀÔ´Ï´Ù.";
+		std::cout << "í™€ìˆ˜ ì…ë‹ˆë‹¤.";
 	}
 }
 
@@ -60,149 +60,149 @@ void ExchangeRate()
 	const float WonToUSD = 0.000731;
 	const float WonToYEN = 0.1061;
 
-	std::cout << "¼ÒÀ¯ÇÏ½Å ¿øÈ­¸¦ ÀÔ·ÂÇÏ¿© ÁÖ¼¼¿ä : ";
+	std::cout << "ì†Œìœ í•˜ì‹  ì›í™”ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì„¸ìš” : ";
 	std::cin >> money;
 	std::cout << std::endl;
 
-	std::cout << "º¯È¯ÇÏ°í ½ÍÀº ÅëÈ­ Å¸ÀÔÀ» ÀÔ·ÂÇÏ¿© ÁÖ¼¼¿ä(U ´Ş·¯, Y ¿£È­ : ";
+	std::cout << "ë³€í™˜í•˜ê³  ì‹¶ì€ í†µí™” íƒ€ì…ì„ ì…ë ¥í•˜ì—¬ ì£¼ì„¸ìš”(U ë‹¬ëŸ¬, Y ì—”í™” : ";
 	std::cin >> type;
 
 	if (type == 'Y' || type == 'y')
 	{
 		money = money * WonToYEN;
-		std::cout << "º¸À¯ÇÏ½Å ¿øÈ­¸¦ ¿£È­·Î È¯ÀüÇÒ °æ¿ì : " << money << "ÀÔ´Ï´Ù.";
+		std::cout << "ë³´ìœ í•˜ì‹  ì›í™”ë¥¼ ì—”í™”ë¡œ í™˜ì „í•  ê²½ìš° : " << money << "ì…ë‹ˆë‹¤.";
 	}
 	else if (type == 'U' || type == 'u')
 	{
 		money = money * WonToUSD;
-		std::cout << "º¸À¯ÇÏ½Å ¿øÈ­¸¦ ´Ş·¯·Î È¯ÀüÇÒ °æ¿ì : " << money << "ÀÔ´Ï´Ù.";
+		std::cout << "ë³´ìœ í•˜ì‹  ì›í™”ë¥¼ ë‹¬ëŸ¬ë¡œ í™˜ì „í•  ê²½ìš° : " << money << "ì…ë‹ˆë‹¤.";
 	}
 	else {
-		std::cout << "À¯È¿ÇÏÁö ¾ÊÀº Å¸ÀÔ ÀÔ´Ï´Ù." << std::endl;
+		std::cout << "ìœ íš¨í•˜ì§€ ì•Šì€ íƒ€ì… ì…ë‹ˆë‹¤." << std::endl;
 	}
 }
 
 void SubwayCalculator()
 {
-	// ±³ÅëÄ«µå, ³ªÀÌ, °Å¸®¿¡ µû¸¥ ÁöÇÏÃ¶ ¿ä±İ °è»ê±â
+	// êµí†µì¹´ë“œ, ë‚˜ì´, ê±°ë¦¬ì— ë”°ë¥¸ ì§€í•˜ì²  ìš”ê¸ˆ ê³„ì‚°ê¸°
 	int age;
 	int paymentMethod;
 	int distance;
 
-	std::cout << "³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ";
+	std::cout << "ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ";
 	std::cin >> age;
 
-	std::cout << "°áÁ¦ ¼ö´ÜÀ» ÀÔ·ÂÇÏ¼¼¿ä (±³ÅëÄ«µå 0, Çö±İ 1) : ";
+	std::cout << "ê²°ì œ ìˆ˜ë‹¨ì„ ì…ë ¥í•˜ì„¸ìš” (êµí†µì¹´ë“œ 0, í˜„ê¸ˆ 1) : ";
 	std::cin >> paymentMethod;
 
-	std::cout << "°Å¸®¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ";
+	std::cout << "ê±°ë¦¬ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ";
 	std::cin >> distance;
 
-	if (paymentMethod == 0)	// ±³ÅëÄ«µå
+	if (paymentMethod == 0)	// êµí†µì¹´ë“œ
 	{
 		if (age < 6)
 		{
-			std::cout << "¹«·á ÀÔ´Ï´Ù.";
+			std::cout << "ë¬´ë£Œ ì…ë‹ˆë‹¤.";
 			return;
 		}
 		if (distance < 10)
 		{
-			if (age >= 6 && age < 13)	// ¾î¸°ÀÌ
+			if (age >= 6 && age < 13)	// ì–´ë¦°ì´
 			{
-				std::cout << "350¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "350ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
-			else if (age >= 13 && age <= 18) // Ã»¼Ò³â
+			else if (age >= 13 && age <= 18) // ì²­ì†Œë…„
 			{
-				std::cout << "720¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "720ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
-			else // À¸¸¥
+			else // ìœ¼ë¥¸
 			{
-				std::cout << "1250¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "1250ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
 		}
 		else if (distance < 15)
 		{
-			if (age >= 6 && age < 13)	// ¾î¸°ÀÌ
+			if (age >= 6 && age < 13)	// ì–´ë¦°ì´
 			{
-				std::cout << "450¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "450ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
-			else if (age >= 13 && age <= 18) // Ã»¼Ò³â
+			else if (age >= 13 && age <= 18) // ì²­ì†Œë…„
 			{
-				std::cout << "800¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "800ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
-			else // À¸¸¥
+			else // ìœ¼ë¥¸
 			{
-				std::cout << "1350¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "1350ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
 		}
 		else if(distance < 20)
 		{
-			if (age >= 6 && age < 13)	// ¾î¸°ÀÌ
+			if (age >= 6 && age < 13)	// ì–´ë¦°ì´
 			{
-				std::cout << "550¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "550ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
-			else if (age >= 13 && age <= 18) // Ã»¼Ò³â
+			else if (age >= 13 && age <= 18) // ì²­ì†Œë…„
 			{
-				std::cout << "880¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "880ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
-			else // À¸¸¥
+			else // ìœ¼ë¥¸
 			{
-				std::cout << "1450¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "1450ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
 		}
 		else
 		{
-			std::cout << "Àß¸øµÈ °Å¸®ÀÔ´Ï´Ù." << std::endl;
+			std::cout << "ì˜ëª»ëœ ê±°ë¦¬ì…ë‹ˆë‹¤." << std::endl;
 		}
 	}
-	else if (paymentMethod == 1) // Çö±İ
+	else if (paymentMethod == 1) // í˜„ê¸ˆ
 	{
 		if (age < 6)
 		{
-			std::cout << "¹«·á ÀÔ´Ï´Ù.";
+			std::cout << "ë¬´ë£Œ ì…ë‹ˆë‹¤.";
 			return;
 		}
 		if (distance < 10)
 		{
-			if (age >= 6 && age < 13)	// ¾î¸°ÀÌ
+			if (age >= 6 && age < 13)	// ì–´ë¦°ì´
 			{
-				std::cout << "550¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "550ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
-			else // À¸¸¥ ¹× Ã»¼Ò³â
+			else // ìœ¼ë¥¸ ë° ì²­ì†Œë…„
 			{
-				std::cout << "1350¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "1350ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
 		}
 		else if (distance < 15)
 		{
-			if (age >= 6 && age < 13)	// ¾î¸°ÀÌ
+			if (age >= 6 && age < 13)	// ì–´ë¦°ì´
 			{
-				std::cout << "450¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "450ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
-			else // À¸¸¥ ¹× Ã»¼Ò³â
+			else // ìœ¼ë¥¸ ë° ì²­ì†Œë…„
 			{
-				std::cout << "1450¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "1450ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
 		}
 		else if(distance < 20)
 		{
-			if (age >= 6 && age < 13)	// ¾î¸°ÀÌ
+			if (age >= 6 && age < 13)	// ì–´ë¦°ì´
 			{
-				std::cout << "550¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "550ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
-			else // À¸¸¥ ¹× Ã»¼Ò³â
+			else // ìœ¼ë¥¸ ë° ì²­ì†Œë…„
 			{
-				std::cout << "1550¿ø ÀÔ´Ï´Ù." << std::endl;
+				std::cout << "1550ì› ì…ë‹ˆë‹¤." << std::endl;
 			}
 		}
 		else
 		{
-			std::cout << "Àß¸øµÈ °Å¸® ÀÔ´Ï´Ù.";
+			std::cout << "ì˜ëª»ëœ ê±°ë¦¬ ì…ë‹ˆë‹¤.";
 		}
 	}
 	else
 	{
-		std::cout << "Àß¸øµÈ °áÁ¦ ¼ö´Ü ÀÔ´Ï´Ù.";
+		std::cout << "ì˜ëª»ëœ ê²°ì œ ìˆ˜ë‹¨ ì…ë‹ˆë‹¤.";
 	}
 }
 
@@ -216,48 +216,48 @@ void ExchangeRateAddvanced()
 	const float EuroToWon = 1606.52;
 	const float PoundToWon = 1860.53;
 
-	std::cout << "¼ÒÀ¯ÇÏ½Å ¿øÈ­¸¦ ÀÔ·ÂÇÏ¿© ÁÖ¼¼¿ä : ";
+	std::cout << "ì†Œìœ í•˜ì‹  ì›í™”ë¥¼ ì…ë ¥í•˜ì—¬ ì£¼ì„¸ìš” : ";
 	std::cin >> money;
 	std::cout << std::endl;
 
-	std::cout << "º¯È¯ÇÏ°í ½ÍÀº ÅëÈ­ Å¸ÀÔÀ» ÀÔ·ÂÇÏ¿© ÁÖ¼¼¿ä(U ´Ş·¯, Y ¿£È­, E À¯·Î, F ÆÄ¿îµå) : ";
+	std::cout << "ë³€í™˜í•˜ê³  ì‹¶ì€ í†µí™” íƒ€ì…ì„ ì…ë ¥í•˜ì—¬ ì£¼ì„¸ìš”(U ë‹¬ëŸ¬, Y ì—”í™”, E ìœ ë¡œ, F íŒŒìš´ë“œ) : ";
 	std::cin >> type;
-	// type = std::toupper(type); // ¼Ò¹®ÀÚ¸¦ ´ë¹®ÀÚ·Î º¯È¯ »ç¿ë 
+	// type = std::toupper(type); // ì†Œë¬¸ìë¥¼ ëŒ€ë¬¸ìë¡œ ë³€í™˜ ì‚¬ìš© 
 
 	switch (type)
 	{
-		// ¼Ò¹®ÀÚ ´ë¹®ÀÚ ÀÔ·ÂÀ» °°ÀÌ ¹Ş±â¸¦ ¿øÇÑ´Ù¸é ¾Æ·¡¿Í °°ÀÌ
-		// ´ë¹®ÀÚ¸¸ ¹Ş±â¸¦ ¿øÇÑ´Ù¸é ÀÔ·Â¹Ş´Â ´Ü°è¿¡¼­ ¼Ò¹®ÀÚ ÀÔ·Â½Ã ´ë¹®ÀÚ·Î º¯È¯
+		// ì†Œë¬¸ì ëŒ€ë¬¸ì ì…ë ¥ì„ ê°™ì´ ë°›ê¸°ë¥¼ ì›í•œë‹¤ë©´ ì•„ë˜ì™€ ê°™ì´
+		// ëŒ€ë¬¸ìë§Œ ë°›ê¸°ë¥¼ ì›í•œë‹¤ë©´ ì…ë ¥ë°›ëŠ” ë‹¨ê³„ì—ì„œ ì†Œë¬¸ì ì…ë ¥ì‹œ ëŒ€ë¬¸ìë¡œ ë³€í™˜
 		case 'U':
 		case 'u':
 		{
-			std::cout << money << "USD´Â ";
-			std::cout << money * USDToWON << "¿ø ÀÔ´Ï´Ù." << std::endl;
+			std::cout << money << "USDëŠ” ";
+			std::cout << money * USDToWON << "ì› ì…ë‹ˆë‹¤." << std::endl;
 			break;
 		}
 		case 'Y':
 		case 'y':
 		{
-			std::cout << money << "JPY´Â ";
-			std::cout << money * YenToWon << "¿ø ÀÔ´Ï´Ù." << std::endl;
+			std::cout << money << "JPYëŠ” ";
+			std::cout << money * YenToWon << "ì› ì…ë‹ˆë‹¤." << std::endl;
 			break;
 		}
 		case 'E':
 		case 'e':
 		{
-			std::cout << money << "EUR´Â ";
-			std::cout << money * EuroToWon << "¿ø ÀÔ´Ï´Ù." << std::endl;
+			std::cout << money << "EURëŠ” ";
+			std::cout << money * EuroToWon << "ì› ì…ë‹ˆë‹¤." << std::endl;
 			break;
 		}
 		case 'P':
 		case 'p':
 		{
-			std::cout << money << "GBP´Â ";
-			std::cout << money * PoundToWon << "¿ø ÀÔ´Ï´Ù." << std::endl;
+			std::cout << money << "GBPëŠ” ";
+			std::cout << money * PoundToWon << "ì› ì…ë‹ˆë‹¤." << std::endl;
 			break;
 		}
 	default:
-		std::cout << "À¯¿äÇÏÁö ¾ÊÀº È­Æó´ÜÀ§ ÀÔ´Ï´Ù." << std::endl;
+		std::cout << "ìœ ìš”í•˜ì§€ ì•Šì€ í™”íë‹¨ìœ„ ì…ë‹ˆë‹¤." << std::endl;
 		break;
 	}
 }

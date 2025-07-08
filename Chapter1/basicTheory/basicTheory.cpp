@@ -1,37 +1,37 @@
-// chapter_1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+ï»¿// chapter_1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
 
-// ¸ðµç ÇÁ·Î±×·¥Àº mainÇÔ¼ö¸¦ °¡Áö°í ÀÖ°í, ÀÌ ÇÔ¼ö¿¡¼­ ½ÃÀÛÇÑ´Ù.(Entry Point)
+// ëª¨ë“  í”„ë¡œê·¸ëž¨ì€ mainí•¨ìˆ˜ë¥¼ ê°€ì§€ê³  ìžˆê³ , ì´ í•¨ìˆ˜ì—ì„œ ì‹œìž‘í•œë‹¤.(Entry Point)
 int main()
 {
     std::cout << "Hello World!\n";
 }
 
-// ÄÄÆÄÀÏ °úÁ¤
+// ì»´íŒŒì¼ ê³¼ì •
 /*
-    ÇÁ·Î±×·¥ ½ÇÇàÀ» À§ÇÏ¿© user°¡ ÀÛ¼ºÇÑ Source Code¸¦ Object Code(¸ñÀûÄÚµå)·Î º¯È¯ÇØ¾ß ÇÑ´Ù.
-    ÀÌ·¯ÇÑ °úÁ¤À» <ÄÄÆÄÀÏ/Compile> ÀÌ¶ó°í ÇÏ¸ç ÀÌ·¯ÇÑ Ã³¸®¸¦ ÇØÁÖ´Â µµ±¸¸¦ <ÄÄÆÄÀÏ·¯/Compiler> ¶ó°íÇÑ´Ù.
-    ÄÄÆÄÀÏÀº ¹®¹ý¿¡ ±²ÀåÈ÷ ¹Î°¨ÇÏ¹Ç·Î ÁÖÀÇÇØ¾ß ÇÑ´Ù.
-    Àà¸øµÈ ¹®¹ýµîÀ¸·Î ÄÄÆÄÀÏÀÌ ½ÇÆÐÇÒ °æ¿ì, ½ÇÆÐÇÑ ¿øÀÎÀ»
-    <ÄÄÆÄÀÏ Å¸ÀÓ ¿¡·¯ / Compile Time Error>¶ó°í ÇÑ´Ù.
+    í”„ë¡œê·¸ëž¨ ì‹¤í–‰ì„ ìœ„í•˜ì—¬ userê°€ ìž‘ì„±í•œ Source Codeë¥¼ Object Code(ëª©ì ì½”ë“œ)ë¡œ ë³€í™˜í•´ì•¼ í•œë‹¤.
+    ì´ëŸ¬í•œ ê³¼ì •ì„ <ì»´íŒŒì¼/Compile> ì´ë¼ê³  í•˜ë©° ì´ëŸ¬í•œ ì²˜ë¦¬ë¥¼ í•´ì£¼ëŠ” ë„êµ¬ë¥¼ <ì»´íŒŒì¼ëŸ¬/Compiler> ë¼ê³ í•œë‹¤.
+    ì»´íŒŒì¼ì€ ë¬¸ë²•ì— êµ‰ìž¥ížˆ ë¯¼ê°í•˜ë¯€ë¡œ ì£¼ì˜í•´ì•¼ í•œë‹¤.
+    ìžšëª»ëœ ë¬¸ë²•ë“±ìœ¼ë¡œ ì»´íŒŒì¼ì´ ì‹¤íŒ¨í•  ê²½ìš°, ì‹¤íŒ¨í•œ ì›ì¸ì„
+    <ì»´íŒŒì¼ íƒ€ìž„ ì—ëŸ¬ / Compile Time Error>ë¼ê³  í•œë‹¤.
 */
 
-// ¸µÅ© °úÁ¤
+// ë§í¬ ê³¼ì •
 /*
-    ÄÄÆÄÀÏ °úÁ¤¿¡¼­ »ý±ä ¸ñÀû¾îµéÀ» ¿¬°áÇÏ¿© ½ÇÇàÆÄÀÏÀ» ¸¸µé¾î ÁÖ´Â °úÁ¤À» <¸µÅ©/Link> ¶ó°í ÇÑ´Ù.
-    ÀÌ·¯ÇÑ Ã³¸®¸¦ Áö¿øÇÏ´Â µµ±¸¸¦ <¸µÄ¿/Linker>¶ó°í ÇÑ´Ù.
-    À§ ¿¹Á¦¿¡¼­ ¹®ÀÚ¿­À» cout¿¡ ³Ñ°ÜÁÖ±â¸¸ ÇÏ¿´Áö¸¸ <iostream> ¶óÀÌºê·¯¸®¸¦ Ç¥±âÇÏ¿´À¸¹Ç·Î
-    coutÀÇ ±â´ÉÀ» »ç¿ëÇÒ ¼ö ÀÖÀ½
-    °á·ÐÀûÀ¸·Î Hello World.obj¿Í iostream.obj¸¦ ¸µÄ¿°¡ ¿¬°áÇÏ¿© HelloWorld.exe(½ÇÇàÆÄÀÏ)¸¦ »ý¼ºÇÔ
+    ì»´íŒŒì¼ ê³¼ì •ì—ì„œ ìƒê¸´ ëª©ì ì–´ë“¤ì„ ì—°ê²°í•˜ì—¬ ì‹¤í–‰íŒŒì¼ì„ ë§Œë“¤ì–´ ì£¼ëŠ” ê³¼ì •ì„ <ë§í¬/Link> ë¼ê³  í•œë‹¤.
+    ì´ëŸ¬í•œ ì²˜ë¦¬ë¥¼ ì§€ì›í•˜ëŠ” ë„êµ¬ë¥¼ <ë§ì»¤/Linker>ë¼ê³  í•œë‹¤.
+    ìœ„ ì˜ˆì œì—ì„œ ë¬¸ìžì—´ì„ coutì— ë„˜ê²¨ì£¼ê¸°ë§Œ í•˜ì˜€ì§€ë§Œ <iostream> ë¼ì´ë¸ŒëŸ¬ë¦¬ë¥¼ í‘œê¸°í•˜ì˜€ìœ¼ë¯€ë¡œ
+    coutì˜ ê¸°ëŠ¥ì„ ì‚¬ìš©í•  ìˆ˜ ìžˆìŒ
+    ê²°ë¡ ì ìœ¼ë¡œ Hello World.objì™€ iostream.objë¥¼ ë§ì»¤ê°€ ì—°ê²°í•˜ì—¬ HelloWorld.exe(ì‹¤í–‰íŒŒì¼)ë¥¼ ìƒì„±í•¨
 
-    ÀÌ·¯ÇÑ ¸µÅ© °úÁ¤¿¡¼­ ¹ß»ýÇÑ ¿¡·¯¸¦ <¸µÅ© Å¸ÀÓ ¿¡·¯ / link-time error >
-    ¸µÅ© °úÁ¤ ÈÄ, »ý¼ºµÈ ½ÇÇà ÆÄÀÏ¿¡¼­ ¿¡·¹°¡ ¹ß»ýÇÏ´Â ¿¡·¯¸¦
-    <·±Å¸ÀÓ ¿¡·¯ / Run-time error>¶ó°í ºÎ¸¥´Ù
+    ì´ëŸ¬í•œ ë§í¬ ê³¼ì •ì—ì„œ ë°œìƒí•œ ì—ëŸ¬ë¥¼ <ë§í¬ íƒ€ìž„ ì—ëŸ¬ / link-time error >
+    ë§í¬ ê³¼ì • í›„, ìƒì„±ëœ ì‹¤í–‰ íŒŒì¼ì—ì„œ ì—ë ˆê°€ ë°œìƒí•˜ëŠ” ì—ëŸ¬ë¥¼
+    <ëŸ°íƒ€ìž„ ì—ëŸ¬ / Run-time error>ë¼ê³  ë¶€ë¥¸ë‹¤
 */
 
-// ÄÄÆÄÀÏ ¿¡·¯, ¸µÅ©Å¸ÀÓ ¿¡·¯, ·±Å¸ÀÓ ¿¡·¯´Â ¼÷ÁöÇØµÎ´Â °ÍÀÌ ÁÁ´Ù.
+// ì»´íŒŒì¼ ì—ëŸ¬, ë§í¬íƒ€ìž„ ì—ëŸ¬, ëŸ°íƒ€ìž„ ì—ëŸ¬ëŠ” ìˆ™ì§€í•´ë‘ëŠ” ê²ƒì´ ì¢‹ë‹¤.
 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
