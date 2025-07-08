@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
 float add(int, int);
 float divide(int, int);
@@ -30,7 +30,7 @@ int main()
 	printf("%d * %d * %d = %f\n", a, b, c, d);
 
 
-	float(*pFunptr1)(int, int); // ÇÔ¼ö Æ÷ÀÎÅÍ
+	float(*pFunptr1)(int, int); // í•¨ìˆ˜ í¬ì¸í„°
 
 	pFunptr1 = add;
 	d = pFunptr1(a, b);
