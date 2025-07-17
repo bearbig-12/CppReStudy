@@ -10,7 +10,7 @@ int main()
 	};
 
 	std::cout << sizeof(OneByte) << std::endl;
-
+	// 결과 값 = 1
 
 	struct FiveByte
 	{
@@ -19,6 +19,12 @@ int main()
 	};
 
 	std::cout << sizeof(FiveByte) << std::endl;
+	// 결과 값 = 8(?) 예상 결과 값은 5이나 컴파일러도 효율적으로 메모리 관리를 위하여
+	// 구조체 멤버들의 크기를 조절한다.
+	// 4바이트 단위로 주소를 관리하면 편하기 때문에 1바이트인 char 뒤에 3byte 패딩을 해버린다.
+	//  []	[][][]	[][][][]	-> [] 하나당 1 바이트
+	// char	(패딩)	  int
+
 
 	struct Ability
 	{
