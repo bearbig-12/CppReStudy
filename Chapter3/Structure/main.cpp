@@ -3,6 +3,23 @@
 
 int main()
 {
+	// 구조체 메모리 정렬 문제
+	struct OneByte
+	{
+		char myChar;
+	};
+
+	std::cout << sizeof(OneByte) << std::endl;
+
+
+	struct FiveByte
+	{
+		char myChar2;
+		int myInt;
+	};
+
+	std::cout << sizeof(FiveByte) << std::endl;
+
 	struct Ability
 	{
 		int Hp;
