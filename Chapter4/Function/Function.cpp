@@ -16,6 +16,12 @@ int Square(int x)
 
 int GetOrderNumber();
 
+// 함수 오버로딩, 매개변수만 다르고 반환 타입은 같아야 함. 반환 타입이 다르면 그냥 다른 함수로 인식
+int print(int i);
+int print(double d);
+int print(float f);
+
+
 int main()
 {
 
@@ -62,4 +68,17 @@ int GetOrderNumber()
 	static int number = 0;		// static이 아닌 기존 int였으면 지역변수 범위로 인하여 매번 초기화 되었을 것.
 								// static은 오직 한 번만 생성되어 프로그램 종룔까지 살아 남는 정적변수
 	return number++;
+}
+
+int print(int i)
+{
+	return  i;
+}
+int print(double d)
+{
+	return d;
+}
+int print(float f)
+{
+	return f;
 }
