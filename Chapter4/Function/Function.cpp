@@ -21,6 +21,8 @@ int print(int i);
 int print(double d);
 int print(float f);
 
+void f(int x);
+void g(int x);
 
 int main()
 {
@@ -47,15 +49,33 @@ int main()
 		//std::cout << "extern value : " << myExternValue << std::endl;
 	}
 
-	{
-		for (int i = 0; i < 10; ++i)
-		{
-			std::cout << GetOrderNumber() << std::endl;
-		}
-	}
-	
+	//{
+	//	for (int i = 0; i < 10; ++i)
+	//	{
+	//		std::cout << GetOrderNumber() << std::endl;
+	//	}
+	//}
+
+	// 함수 호출 스택
+	int x = 10;
+	f(x);
+	// main 호출 -> f() 호출 -> g()가 호출된다.
+	// 처리 순서는 g()가 처리되고 반환되면 f()로, f()가 처리되고 반환되면 main으로 돌아간다.
+	// 결국 가장 마지막에 들어온 g()가 제일 먼저 처리되고 가장먼저 들어온 main이 제일 늦게 처리된다. (호출 스택)
+	// 이 처리 순서를 잘 기억하는 것이 재귀함수 이해에 도움이 된다.
 
 
+}
+
+void f(int x)
+{
+	int y = 1;
+	g(x);
+}
+
+void g(int x)
+{
+	int z = 1;
 }
 
 double FindBigger(double x, double y)
