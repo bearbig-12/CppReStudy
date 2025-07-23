@@ -22,7 +22,7 @@ void PrintMonster(Monster monster);
 int main()
 {
 	Monster wolf;
-	Monster demon {Demon, "주니어 발록", 1000};
+	Monster demon {Demon, "주니어 발록", 1000}; 
 
 	wolf.Type = Wolf;
 	wolf.Name = "늑늑대대";
