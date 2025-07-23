@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <ctime>
 void CreateAnswer(int answer[3]);
 void StartGame();
@@ -7,8 +7,8 @@ bool CheckAnswer(int player_answer[3], int answer[3]);
 
 int main()
 {
-	// ½ºÆ®¶óÀÌÅ©´Â ÀÚ¸®¼ö°¡ °°°í ¼ıÀÚµµ °°Àº °æ¿ì ex) (1, 3, 2) (1, 3, 2)
-	// º¼Àº ¼ıÀÚ´Â °°Áö¸¸ ÀÚ¸®¼ö°¡ ´Ù¸¥ °æ¿ì
+	// ìŠ¤íŠ¸ë¼ì´í¬ëŠ” ìë¦¬ìˆ˜ê°€ ê°™ê³  ìˆ«ìë„ ê°™ì€ ê²½ìš° ex) (1, 3, 2) (1, 3, 2)
+	// ë³¼ì€ ìˆ«ìëŠ” ê°™ì§€ë§Œ ìë¦¬ìˆ˜ê°€ ë‹¤ë¥¸ ê²½ìš°
 
 	
 
