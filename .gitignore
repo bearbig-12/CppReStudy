@@ -13,7 +13,6 @@ x64/
 **/x64/
 
 ##files
-*.sln
 **/*.vcxproj
 **/*.vcxproj.*
 **/*.i
