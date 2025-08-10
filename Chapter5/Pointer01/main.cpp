@@ -39,6 +39,18 @@ int main()
 		std::cout << (void*)p0 << " : " << (int)*p0 << std::endl;
 		p0++;
 	}
+	//1400이 나올 것이다 하지만 1025를 16진수로 변환하면 00 00 04 01 이 나온다. 이러한 현상을 Endian이라고 한다.
 
+	struct Status
+	{
+		int HP;
+		int MP;
+	};
+
+	Status myStat = { 100, 10 };
+
+	Status* pStat = &myStat;
+
+	std::cout << pStat->HP << std::endl;
 
 }
